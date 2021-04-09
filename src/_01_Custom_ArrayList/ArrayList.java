@@ -12,12 +12,12 @@ public class ArrayList <T>{
 		return null;
 	}
 	
-	public void add(T val) {
+	public void add(int loc) {
 		
 	}
 	
 	public void insert(int loc, T val) throws IndexOutOfBoundsException {
-		
+		this.insert(loc, val);
 	}
 	
 	public void set(int loc, T val) throws IndexOutOfBoundsException {
