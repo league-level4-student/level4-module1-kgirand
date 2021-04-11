@@ -8,12 +8,13 @@ public class ArrayList <T>{
 	}
 	
 	public T get(int loc) throws IndexOutOfBoundsException {
-		
-		return null;
+		System.out.println(loc);
+		return this.get(loc);
 	}
 	
 	public void add(int loc) {
-		
+		System.out.println(loc);
+		this.add(loc);
 	}
 	
 	public void insert(int loc, T val) throws IndexOutOfBoundsException {

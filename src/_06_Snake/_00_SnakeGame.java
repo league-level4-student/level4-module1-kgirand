@@ -103,12 +103,15 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 	public void keyPressed(KeyEvent e) {
 		//1. Use a switch statement on e.getKeyCode()
 		//   to determine which key was pressed.
-		
+		Direction d = Direction.UP;
+		switch(e.getKeyCode()) {
 		// if an arrow key is pressed, set the snake's 
 		// direction accordingly
+			
+			
 		
 		// if the space key is pressed, call the snake's feed method
-		
+		}
 	}
 
 	private void setFoodLocation() {
