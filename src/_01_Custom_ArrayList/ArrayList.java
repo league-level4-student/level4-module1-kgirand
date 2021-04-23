@@ -11,10 +11,10 @@ public class ArrayList <T>{
 		return list[loc];
 	}
 	
-	public void add(int loc,T val) {
+	public void add(T val) {
 		
 		T[] newList = (T[])new Object[list.length+1];
-		for(int i = 0; i < loc; i++) {
+		for(int i = 0; i < list.length; i++) {
 			newList[i] = list[i];
 		}
 		newList[newList.length-1] = val;
@@ -24,8 +24,13 @@ public class ArrayList <T>{
 	public void insert(int loc, T val) throws IndexOutOfBoundsException {
 		T[] newList = (T[])new Object[list.length+1];
 		for(int i = 0; i < loc; i++) {
+			newList[i] = list[i];
+		}
+		newList[loc]=val;
+		for(int i = loc; i < list.length; i++) {
 			newList[i+1] = list[i];
 		}
+		
 		list = newList;
 		}
 	
@@ -38,13 +43,23 @@ public class ArrayList <T>{
 		for(int i = 0; i < loc; i++) {
 			newList[i] = list[i];
 		}
+		for(int i = loc; i < list.length-1; i ++) {
+			newList[i]=list[i+1];
+		}
 		
 		list = newList;
 	
 	}
+	public int size() {
+		return list.length;
+	}
 	
 	public boolean contains(T val) {
-		
+		for(int i = 0; i<list.length; i++) {
+			if(list[i]==val) {
+				return true; 
+			}
+		}
 		return false;
 	}
 }
