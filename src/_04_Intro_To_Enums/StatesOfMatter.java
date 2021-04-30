@@ -14,19 +14,19 @@ public static void main(String[] args) {
 switch(data) {
 case SOLID:{
 	System.out.println("solid");
-	break;
+// break;
 }
 case LIQUID:{
 	System.out.println("liquid");
-	break;
+//	break;
 }
 case GAS:{
 	System.out.println("gas");
-	break;
+//	break;
 }
 case PLASMA:{
 	System.out.println("plasma");
-	break;
+//	break;
 }
 case BOSE_EINSTEIN_CONDENSATE:{
 	System.out.println("bose einstein condensate");

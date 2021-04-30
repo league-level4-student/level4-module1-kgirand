@@ -17,25 +17,25 @@ public class CustomButtonOptionPanes {
 		
 		switch(input) {
 		case 0:
-			System.out.println("its sunday");
+			System.out.println("its sunday!");
 			break;
 		case 1:
-			System.out.println("its monday");
+			System.out.println("its monday!");
 			break;
 		case 2:
-			System.out.println("its tuesday");
+			System.out.println("its tuesday!");
 			break;
 		case 3:
-			System.out.println("its wednesday");
+			System.out.println("its wednesday!");
 			break;
 		case 4:
-			System.out.println("its thursday");
+			System.out.println("its thursday!");
 			break;
 		case 5:
-			System.out.println("its friday");
+			System.out.println("its friday!");
 			break;
 		case 6: 
-			System.out.println("its saturday");
+			System.out.println("its saturday!");
 			break;
 		}
 	}

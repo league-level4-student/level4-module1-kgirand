@@ -13,7 +13,7 @@ ARIES, TAURUS, GEMINI, CANCER, LEO, VIRGO,
 	// 2. Write a method that takes in a Zodiac enum object and uses a JOPtionPane to display
 	//    a different horoscope based on the Zodiac's state.
 	public static void main(String[] args) {	
-		Zodiac zod = Zodiac.ARIES;
+		Zodiac zod = Zodiac.GEMINI;
 switch(zod){
 case ARIES:{
 		JOptionPane.showMessageDialog(null, "Your zodiac is aries");
@@ -25,7 +25,7 @@ case ARIES:{
 	}
 	case GEMINI:{
 		JOptionPane.showMessageDialog(null, "Your zodiac is gemini");
-		break;
+		//break;
 	}
 	case CANCER:{
 		JOptionPane.showMessageDialog(null, "Your zodiac is cancer");
@@ -57,6 +57,10 @@ case ARIES:{
 	}
 	case PISCES:{
 		JOptionPane.showMessageDialog(null, "Your zodiac is pisces");
+		break;
+	}
+	default:{
+		JOptionPane.showMessageDialog(null, "error");
 		break;
 	}
 	
