@@ -87,11 +87,11 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		//   of the game. The smaller the number, the faster it goes.
 		switch(choice) {
 		case "Expert":
-			timer.setDelay(3);
+			timer.setDelay(10);
 		case "Moderate":
-			timer.setDelay(5);
+			timer.setDelay(80);
 		case "Beginner":
-			timer.setDelay(7);
+			timer.setDelay(100);
 		}
 		
 		//3. start the timer
@@ -137,7 +137,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		//   use the snake's isLocationOnSnake method to make sure you don't put the food on the snake
 		Random randy = new Random();
 		Location location = new Location(randy.nextInt(WIDTH),randy.nextInt(HEIGHT));
-		while(snake.isLocationOnSnake(foodLocation)){
+		while(snake.isLocationOnSnake(location)){
 			location = new Location(randy.nextInt(WIDTH),randy.nextInt(HEIGHT));
 
 		}
@@ -175,6 +175,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		snake.update();
 		//2. if the snake is colliding with its own body 
 		//   or if the snake is out of bounds, call gameOver
+		
 		if(snake.isHeadCollidingWithBody()==true) {
 			gameOver();
 		}else if(snake.isOutOfBounds()==true) {
@@ -182,9 +183,10 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		}
 		//3. if the location of the head is equal to the location of the food,
 		// 	 feed the snake and set the food location
-		if(snake.getHeadLocation()==foodLocation) {
+		if(snake.getHeadLocation().equals(foodLocation)) {
 			snake.feed();
 			setFoodLocation();
+			
 		}
 		//4. call panel.repaint();
 		panel.repaint();
